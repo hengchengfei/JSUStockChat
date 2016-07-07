@@ -2,12 +2,11 @@
 
 JSUStockChat is a easy way to make stock chart with Auto Layout And StoryBoard!
 
-<img src="https://github.com/BestSwift/JSUStockChat/blob/master/JSUStockChartDemo/stock.gif" alt="" />
-
-## JSUStockChat
-
 * Xcode 7.3 / Swift 2.2 / 3.0
 * iOS 8.0 / 9.0 
+
+<img src="https://github.com/BestSwift/JSUStockChat/blob/master/JSUStockChartDemo/stock.gif" alt="" />
+
 
 ## Usage
 
