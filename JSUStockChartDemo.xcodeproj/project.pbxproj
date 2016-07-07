@@ -37,6 +37,7 @@
 		965E67BF1D2A440C000CAF3E /* kLineData.json in Resources */ = {isa = PBXBuildFile; fileRef = 965E67BE1D2A440C000CAF3E /* kLineData.json */; };
 		965E67C11D2A52B0000CAF3E /* weekLineData.json in Resources */ = {isa = PBXBuildFile; fileRef = 965E67C01D2A52B0000CAF3E /* weekLineData.json */; };
 		965E67C31D2A5831000CAF3E /* monthLineData.json in Resources */ = {isa = PBXBuildFile; fileRef = 965E67C21D2A5831000CAF3E /* monthLineData.json */; };
+		96FFDC291D2E527000364FF5 /* stock.gif in Resources */ = {isa = PBXBuildFile; fileRef = 96FFDC281D2E527000364FF5 /* stock.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		965E67BE1D2A440C000CAF3E /* kLineData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kLineData.json; sourceTree = "<group>"; };
 		965E67C01D2A52B0000CAF3E /* weekLineData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weekLineData.json; sourceTree = "<group>"; };
 		965E67C21D2A5831000CAF3E /* monthLineData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = monthLineData.json; sourceTree = "<group>"; };
+		96FFDC281D2E527000364FF5 /* stock.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = stock.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				965E676D1D29F8DB000CAF3E /* Assets.xcassets */,
 				965E676F1D29F8DB000CAF3E /* LaunchScreen.storyboard */,
 				965E67721D29F8DB000CAF3E /* Info.plist */,
+				96FFDC281D2E527000364FF5 /* stock.gif */,
 			);
 			path = JSUStockChartDemo;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				965E67BD1D2A3F63000CAF3E /* fiveLineData.json in Resources */,
 				965E67C11D2A52B0000CAF3E /* weekLineData.json in Resources */,
 				965E676E1D29F8DB000CAF3E /* Assets.xcassets in Resources */,
+				96FFDC291D2E527000364FF5 /* stock.gif in Resources */,
 				965E67BB1D2A3AC1000CAF3E /* timeStateData.json in Resources */,
 				965E676C1D29F8DB000CAF3E /* Main.storyboard in Resources */,
 			);
