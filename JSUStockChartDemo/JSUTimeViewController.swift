@@ -47,9 +47,11 @@ class JSUTimeViewController: UIViewController {
     var timer:NSTimer?
     
     func loadData(){
+        //get priceData
         let model:JSUPriceModel = readFile("timeLineData", ext: "json")
         self.setupTimeLineView(model)
         
+        //get tradeData
         let state:JSUTradeModel = readFile("timeStateData", ext: "json")
         self.setupTradeView(state)
     }
