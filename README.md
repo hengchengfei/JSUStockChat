@@ -8,9 +8,12 @@ JSUStockChat is a easy way to make stock chart with Auto Layout And StoryBoard!
 ## Usage
 
 1.Drag JSUStockChart to your project.
+
 2.Drag a UIView to your ViewController.
+
 3.Change the view Custom Class to TimeLineStockChartView and Connect to @IBOutlet weak var timeView.
-4.In ViewDidLoad
+
+4.In ViewDidLoad.
 
 ```swift
 
