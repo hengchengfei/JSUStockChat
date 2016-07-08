@@ -38,6 +38,16 @@
 		965E67C11D2A52B0000CAF3E /* weekLineData.json in Resources */ = {isa = PBXBuildFile; fileRef = 965E67C01D2A52B0000CAF3E /* weekLineData.json */; };
 		965E67C31D2A5831000CAF3E /* monthLineData.json in Resources */ = {isa = PBXBuildFile; fileRef = 965E67C21D2A5831000CAF3E /* monthLineData.json */; };
 		96FFDC291D2E527000364FF5 /* stock.gif in Resources */ = {isa = PBXBuildFile; fileRef = 96FFDC281D2E527000364FF5 /* stock.gif */; };
+		96FFDC2E1D2F781900364FF5 /* JSUStockLandHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FFDC2A1D2F781900364FF5 /* JSUStockLandHomeViewController.swift */; };
+		96FFDC2F1D2F781900364FF5 /* JSUStockLandHomeSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FFDC2B1D2F781900364FF5 /* JSUStockLandHomeSegue.swift */; };
+		96FFDC301D2F781900364FF5 /* JSUStockLandHomeSegueUnwind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FFDC2C1D2F781900364FF5 /* JSUStockLandHomeSegueUnwind.swift */; };
+		96FFDC311D2F781900364FF5 /* JSUStockLandKLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FFDC2D1D2F781900364FF5 /* JSUStockLandKLineViewController.swift */; };
+		96FFDC331D2F87A500364FF5 /* JSUStateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FFDC321D2F87A500364FF5 /* JSUStateModel.swift */; };
+		96FFDC351D2F899600364FF5 /* priceData.json in Resources */ = {isa = PBXBuildFile; fileRef = 96FFDC341D2F899600364FF5 /* priceData.json */; };
+		96FFDC3A1D2FA4FD00364FF5 /* breathPoint.gif in Resources */ = {isa = PBXBuildFile; fileRef = 96FFDC361D2FA4FD00364FF5 /* breathPoint.gif */; };
+		96FFDC3B1D2FA4FD00364FF5 /* longPress.gif in Resources */ = {isa = PBXBuildFile; fileRef = 96FFDC371D2FA4FD00364FF5 /* longPress.gif */; };
+		96FFDC3C1D2FA4FD00364FF5 /* swipe.gif in Resources */ = {isa = PBXBuildFile; fileRef = 96FFDC381D2FA4FD00364FF5 /* swipe.gif */; };
+		96FFDC3D1D2FA4FD00364FF5 /* zoom.gif in Resources */ = {isa = PBXBuildFile; fileRef = 96FFDC391D2FA4FD00364FF5 /* zoom.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +87,16 @@
 		965E67C01D2A52B0000CAF3E /* weekLineData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weekLineData.json; sourceTree = "<group>"; };
 		965E67C21D2A5831000CAF3E /* monthLineData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = monthLineData.json; sourceTree = "<group>"; };
 		96FFDC281D2E527000364FF5 /* stock.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = stock.gif; sourceTree = "<group>"; };
+		96FFDC2A1D2F781900364FF5 /* JSUStockLandHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSUStockLandHomeViewController.swift; sourceTree = "<group>"; };
+		96FFDC2B1D2F781900364FF5 /* JSUStockLandHomeSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSUStockLandHomeSegue.swift; sourceTree = "<group>"; };
+		96FFDC2C1D2F781900364FF5 /* JSUStockLandHomeSegueUnwind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSUStockLandHomeSegueUnwind.swift; sourceTree = "<group>"; };
+		96FFDC2D1D2F781900364FF5 /* JSUStockLandKLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSUStockLandKLineViewController.swift; sourceTree = "<group>"; };
+		96FFDC321D2F87A500364FF5 /* JSUStateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSUStateModel.swift; sourceTree = "<group>"; };
+		96FFDC341D2F899600364FF5 /* priceData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = priceData.json; sourceTree = "<group>"; };
+		96FFDC361D2FA4FD00364FF5 /* breathPoint.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = breathPoint.gif; sourceTree = "<group>"; };
+		96FFDC371D2FA4FD00364FF5 /* longPress.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = longPress.gif; sourceTree = "<group>"; };
+		96FFDC381D2FA4FD00364FF5 /* swipe.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = swipe.gif; sourceTree = "<group>"; };
+		96FFDC391D2FA4FD00364FF5 /* zoom.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = zoom.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,11 +150,19 @@
 				965E67A61D2A02C7000CAF3E /* JSUMonthLineViewController.swift */,
 				965E67A71D2A02C7000CAF3E /* JSUFiveTimeViewController.swift */,
 				965E67A81D2A02C7000CAF3E /* JSUTimeViewController.swift */,
+				96FFDC2A1D2F781900364FF5 /* JSUStockLandHomeViewController.swift */,
+				96FFDC2B1D2F781900364FF5 /* JSUStockLandHomeSegue.swift */,
+				96FFDC2C1D2F781900364FF5 /* JSUStockLandHomeSegueUnwind.swift */,
+				96FFDC2D1D2F781900364FF5 /* JSUStockLandKLineViewController.swift */,
 				965E676A1D29F8DB000CAF3E /* Main.storyboard */,
 				965E676D1D29F8DB000CAF3E /* Assets.xcassets */,
 				965E676F1D29F8DB000CAF3E /* LaunchScreen.storyboard */,
 				965E67721D29F8DB000CAF3E /* Info.plist */,
 				96FFDC281D2E527000364FF5 /* stock.gif */,
+				96FFDC361D2FA4FD00364FF5 /* breathPoint.gif */,
+				96FFDC371D2FA4FD00364FF5 /* longPress.gif */,
+				96FFDC381D2FA4FD00364FF5 /* swipe.gif */,
+				96FFDC391D2FA4FD00364FF5 /* zoom.gif */,
 			);
 			path = JSUStockChartDemo;
 			sourceTree = "<group>";
@@ -163,6 +191,7 @@
 				965E67B11D2A0564000CAF3E /* JSUPriceModel.swift */,
 				965E67B31D2A0577000CAF3E /* JSUTradeModel.swift */,
 				965E67B51D2A0870000CAF3E /* JSUKLineModel.swift */,
+				96FFDC321D2F87A500364FF5 /* JSUStateModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -170,6 +199,7 @@
 		965E67B71D2A2A79000CAF3E /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				96FFDC341D2F899600364FF5 /* priceData.json */,
 				965E67C21D2A5831000CAF3E /* monthLineData.json */,
 				965E67C01D2A52B0000CAF3E /* weekLineData.json */,
 				965E67B81D2A2A79000CAF3E /* timeLineData.json */,
@@ -250,9 +280,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96FFDC3B1D2FA4FD00364FF5 /* longPress.gif in Resources */,
+				96FFDC3D1D2FA4FD00364FF5 /* zoom.gif in Resources */,
+				96FFDC3C1D2FA4FD00364FF5 /* swipe.gif in Resources */,
 				965E679B1D29F9E5000CAF3E /* Info.plist in Resources */,
 				965E67B91D2A2A79000CAF3E /* timeLineData.json in Resources */,
 				965E67711D29F8DB000CAF3E /* LaunchScreen.storyboard in Resources */,
+				96FFDC3A1D2FA4FD00364FF5 /* breathPoint.gif in Resources */,
 				965E67BF1D2A440C000CAF3E /* kLineData.json in Resources */,
 				965E67C31D2A5831000CAF3E /* monthLineData.json in Resources */,
 				965E67BD1D2A3F63000CAF3E /* fiveLineData.json in Resources */,
@@ -261,6 +295,7 @@
 				96FFDC291D2E527000364FF5 /* stock.gif in Resources */,
 				965E67BB1D2A3AC1000CAF3E /* timeStateData.json in Resources */,
 				965E676C1D29F8DB000CAF3E /* Main.storyboard in Resources */,
+				96FFDC351D2F899600364FF5 /* priceData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,20 +354,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96FFDC2F1D2F781900364FF5 /* JSUStockLandHomeSegue.swift in Sources */,
 				965E67A11D29F9E5000CAF3E /* TimeDataset.swift in Sources */,
 				965E67A01D29F9E5000CAF3E /* StockChartBase.swift in Sources */,
+				96FFDC2E1D2F781900364FF5 /* JSUStockLandHomeViewController.swift in Sources */,
 				965E67691D29F8DB000CAF3E /* ViewController.swift in Sources */,
+				96FFDC311D2F781900364FF5 /* JSUStockLandKLineViewController.swift in Sources */,
 				965E67AC1D2A02C7000CAF3E /* JSUFiveTimeViewController.swift in Sources */,
 				965E679A1D29F9E5000CAF3E /* JSUExtension.swift in Sources */,
 				965E679C1D29F9E5000CAF3E /* KLineDataSet.swift in Sources */,
 				965E67B61D2A0870000CAF3E /* JSUKLineModel.swift in Sources */,
 				965E67AA1D2A02C7000CAF3E /* JSUWeekLineViewController.swift in Sources */,
+				96FFDC301D2F781900364FF5 /* JSUStockLandHomeSegueUnwind.swift in Sources */,
 				965E67A31D29F9E5000CAF3E /* TimeLineStockChartView.swift in Sources */,
 				965E67A91D2A02C7000CAF3E /* JSUKLineViewController.swift in Sources */,
 				965E67B41D2A0577000CAF3E /* JSUTradeModel.swift in Sources */,
 				965E67AD1D2A02C7000CAF3E /* JSUTimeViewController.swift in Sources */,
 				965E67671D29F8DB000CAF3E /* AppDelegate.swift in Sources */,
 				965E67AB1D2A02C7000CAF3E /* JSUMonthLineViewController.swift in Sources */,
+				96FFDC331D2F87A500364FF5 /* JSUStateModel.swift in Sources */,
 				965E679F1D29F9E5000CAF3E /* KLineStockChartViewBase.swift in Sources */,
 				965E67B21D2A0564000CAF3E /* JSUPriceModel.swift in Sources */,
 				965E679E1D29F9E5000CAF3E /* KLineStockChartView.swift in Sources */,

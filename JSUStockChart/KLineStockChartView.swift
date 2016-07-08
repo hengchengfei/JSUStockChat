@@ -14,7 +14,7 @@ public class KLineStockChartView:KLineStockChartViewBase {
     var dataSet : KLineDataSet?
     var countOfshowCandle : Int{
         get{
-            return Int(self.contentWidth/(self.candleWidth))
+            return Int((self.width - offsetLeft - offsetRight)/(self.candleWidth))
         }
     }
     var _startDrawIndex:Int = 0
@@ -81,21 +81,20 @@ public class KLineStockChartView:KLineStockChartViewBase {
         if zoomEnabled {
             self.addGestureRecognizer(self.pinGesture)
         }
-
-
         self.addGestureRecognizer(self.longPressGesture)
-//        self.addGestureRecognizer(self.tapGesture)
     }
     
     func setupData(dataSet:KLineDataSet){
-        if let d = dataSet.data where d.count > 0{
+        if let d = dataSet.data where self.countOfshowCandle > 0{
             self.hiddenStatusView()
             
             dataSet.data = [KLineEntity](d)
 
             self.dataSet = dataSet
             
-            //self.startDrawIndex = self.dataSet!.data!.count - self.countOfshowCandle
+            if d.count > self.countOfshowCandle{
+                self.startDrawIndex = d.count - self.countOfshowCandle
+            }
            
             self.notifyDataSetChanged()
         }

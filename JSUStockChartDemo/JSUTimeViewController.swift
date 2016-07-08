@@ -239,7 +239,7 @@ class JSUTimeViewController: UIViewController {
         set.fillAlpha = 0.5
         set.drawFilledEnabled = true
         self.timeView.highlightLineShowEnabled = true;
-        self.timeView.endPointShowEnabled = NSDate().isTradingTime()
+        self.timeView.endPointShowEnabled = true //是否显示呼吸灯
         self.timeView.setupData(set)
 
     }

@@ -8,14 +8,6 @@
 
 import UIKit
 
-enum KLineType {
-    case Time
-    case Five
-    case Day
-    case Week
-    case Month
-}
-
 class ViewController: UIViewController {
 
     
@@ -28,9 +20,18 @@ class ViewController: UIViewController {
     var curVC :UIViewController!
     var oldVC :UIViewController!
     var curType = KLineType.Time
+    var statusData : JSUStateModel!
+    var tapGesture : UITapGestureRecognizer{
+        return UITapGestureRecognizer(target: self, action: #selector(handleTapGestureAction(_:)))
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+      
+        
+        let data:JSUStateModel = readFile("priceData", ext: "json")
+        self.statusData = data
         
         timeController = jsuStoryboardMain("JSUTimeViewController") as? JSUTimeViewController
         timeController!.view.frame = StockChartView.bounds
@@ -52,9 +53,27 @@ class ViewController: UIViewController {
         self.StockChartView.addSubview(fiveController!.view)
         self.StockChartView.addSubview(kLineController!.view)
         self.StockChartView.addSubview(timeController!.view)
+        self.StockChartView.addGestureRecognizer(tapGesture)
         curVC = timeController
         
     }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "JSUStockLandHomeSegue"{
+            let controller = segue.destinationViewController as! JSUStockLandHomeViewController
+            controller.statusData = self.statusData
+            controller.curType = self.curType
+        }
+    }
+    
+    func handleTapGestureAction(recognizer:UITapGestureRecognizer){
+        self.performSegueWithIdentifier("JSUStockLandHomeSegue", sender: self)
+    }
+    
+    @IBAction func returnFromSegueActions(sender:UIStoryboardSegue){
+    }
+
     
     @IBAction func timeButtonClick(){
         if curVC != timeController{
@@ -68,9 +87,7 @@ class ViewController: UIViewController {
                     self.curVC = self.oldVC
                 }
             }
-            
         }
-        
     }
     
     @IBAction func fiveButtonClick(){
@@ -85,9 +102,7 @@ class ViewController: UIViewController {
                     self.curVC = self.oldVC
                 }
             }
-            
         }
-        
     }
     
     @IBAction func kLineButtonClick(){
@@ -103,7 +118,6 @@ class ViewController: UIViewController {
                 }
             }
         }
-        
     }
     
     @IBAction func weekButtonClick(){
@@ -119,7 +133,6 @@ class ViewController: UIViewController {
                 }
             }
         }
-        
     }
     
     @IBAction func monthButtonClick(){
@@ -135,11 +148,10 @@ class ViewController: UIViewController {
                 }
             }
         }
-        
     }
-
-
     
-
+    override func prefersStatusBarHidden() -> Bool {
+        return false
+    }
 }
 

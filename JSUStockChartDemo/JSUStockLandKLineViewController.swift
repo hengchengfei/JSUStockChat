@@ -1,34 +1,44 @@
 //
-//  CSFPortfStockKLineViewController.swift
+//  CSFStockLandKLineViewController.swift
 //  csfsamradar
 //
-//  Created by 苏小超 on 16/3/1.
+//  Created by 苏小超 on 16/4/25.
 //  Copyright © 2016年 vsto. All rights reserved.
 //
 
 import UIKit
 
-class JSUKLineViewController: UIViewController,KLineChartViewDelegate {
+class JSUStockLandKLineViewController: UIViewController,KLineChartViewDelegate {
     
     @IBOutlet weak var kLineView:KLineStockChartView!
-    
-    var isLandScape = false
     
     var dataSource : [JSUKLineModel]?
     
     var tick : String?
     
     func loadData(){
-
-        let model:JSUKLineMessage = readFile("kLineData", ext: "json")
-        self.setupKLineView(model.message!)
-
+        
+        
+//        if let c = tick{
+//
+//            let lastYearStr = NSDate().addMonth(-12).toString("yyyy-MM-dd")
+//            
+//            csfRequest(.GET, CSFURLServerMarket, CSFURLCompanyKLine, parameters: ["codes":c,"from":lastYearStr], encoding: nil, headers: nil, success: { (statusCode, data, model:CSFBaseArrayModel<JSUKLineModel>?) -> Void in
+//                if let m = model?.message{
+//                    self.setupKLineView(m)
+//                }
+//                
+//            }) { (statusCode, message) -> Void in
+//                self.kLineView.showFailStatusView()
+//            }
+//            
+//        }
     }
     
     func setupKLineView(data:[JSUKLineModel]){
         var array = [KLineEntity]()
         
-        for (index,dic) in data.enumerate(){
+        for dic in data{
             let entity = KLineEntity()
             if let h = dic.high{
                 entity.high = CGFloat(h)
@@ -36,16 +46,6 @@ class JSUKLineViewController: UIViewController,KLineChartViewDelegate {
             
             if let o = dic.open{
                 entity.open = CGFloat(o)
-                if index == 0{
-                    entity.preClosePx = CGFloat(o)
-                }else{
-                    if let c = data[index-1].close{
-                        entity.preClosePx = CGFloat(c)
-                    }else{
-                        entity.preClosePx = CGFloat(o)
-                    }
-                    
-                }
             }
             
             if let l = dic.low{
@@ -54,10 +54,6 @@ class JSUKLineViewController: UIViewController,KLineChartViewDelegate {
             
             if let c = dic.close{
                 entity.close = CGFloat(c)
-            }
-            
-            if let r = dic.inc{
-                entity.rate = CGFloat(r)
             }
             
             if let d = dic.dt{
@@ -81,8 +77,6 @@ class JSUKLineViewController: UIViewController,KLineChartViewDelegate {
             }
             
             
-            
-            
             array.append(entity)
         }
         
@@ -93,7 +87,7 @@ class JSUKLineViewController: UIViewController,KLineChartViewDelegate {
     }
     
     func chartKlineScrollLeft(chartView: StockChartBase) {
-        
+        print("滚滚")
     }
     
     
@@ -112,22 +106,14 @@ class JSUKLineViewController: UIViewController,KLineChartViewDelegate {
         self.kLineView.xAxisHeitht = 25;
         self.kLineView.delegate = self
         self.kLineView.highlightLineShowEnabled = true;
-        
-        if isLandScape {
-            self.kLineView.zoomEnabled = true;
-            self.kLineView.scrollEnabled = true;
-        }else{
-            self.kLineView.zoomEnabled = false;
-            self.kLineView.scrollEnabled = false;
-        }
-        
-        self.kLineView.commonInit()
+
+        self.kLineView.zoomEnabled = true;
+        self.kLineView.scrollEnabled = true;
+
         
         
-    }
-    
-    //Because use autolayout,so must loadData in viewDidLayoutSubviews
-    override func viewDidLayoutSubviews() {
+        
+        
         self.loadData()
     }
     
